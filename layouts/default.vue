@@ -4,17 +4,36 @@
   </div>
 </template>
 
-<style>
-html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+<script>
+import { mapMutations, mapState } from 'vuex'
+import _ from 'lodash'
+
+export default {
+    created()
+    {
+      if (process.browser) { 
+        window.addEventListener('scroll', _.debounce(this.navBarHandleScroll, 500));
+      }
+    },
+    mounted(){
+     // alert(this.nav.show)
+    },
+    computed: {
+      ...mapState({nav: state => state.nav}),
+    },
+    methods:{
+      ...mapMutations({navBarHandleScroll: 'nav/handleScroll'}),
+    },
+    beforeDestroy()
+    {
+      if (process.browser) { 
+        window.removeEventListener('scroll', this.navBarHandleScroll);
+      }
+    },
 }
+</script>
+
+<style lang="scss">
 
 *, *:before, *:after {
   box-sizing: border-box;

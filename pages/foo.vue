@@ -20,7 +20,7 @@
           <nuxt-link to="/">home</nuxt-link>
           
           <b-button @click="incrementMusic" variant="outline-info" class="m-1 foo-hover" size="lg">
-            Foo <i class="fab fa-github">{{ musicCount }}</i>
+            Foo <i class="fab fa-github">{{ music.counter }}</i>
           </b-button>
       </div>
     </div>
@@ -41,11 +41,7 @@ export default {
     })
   },
   computed: {
-   /* musicCount()
-    {
-      return this.$store.state.music.counter
-    },*/
-    ...mapState({musicCount: state => state.music.counter}),
+    ...mapState({music: state => state.music}),
   },
   methods: {
     ...mapMutations({incrementMusic: 'music/increment'}),

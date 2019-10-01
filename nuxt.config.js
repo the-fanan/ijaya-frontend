@@ -3,15 +3,15 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'ssr-frontend',
+    title: 'Ijaya Management',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Frontend for Ijaya Management' }
+      { hid: 'description', name: 'description', content: 'Music talent management house' }
     ],
     link: [
-      { rel: 'icon', type: 'image/png', href: '/ijaya-black.png' },
-     // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+     { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+     { rel: 'icon', type: 'image/png', href: '/ijaya-black.png' },
     ]
   },
   css: [

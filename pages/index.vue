@@ -41,9 +41,6 @@ export default {
   components: {
     AppLogo
   },
-  head: {
-    title: 'ssr update frontend'
-  }
 }
 </script>
 
