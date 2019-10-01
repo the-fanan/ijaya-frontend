@@ -1,5 +1,16 @@
 @import 'variables.scss', 'animate.scss', '../fontawesome-5/css/all.min.css';
-
+@font-face {
+  font-family: $theme-font-regular;
+  src: url("../fonts/roboto/Roboto-Regular.ttf");
+}
+@font-face {
+	font-family: $theme-font-light;
+	src: url("../fonts/roboto/Roboto-Light.ttf");
+}
+@font-face {
+	font-family: $theme-font-bold;
+	src: url("../fonts/roboto/Roboto-Bold.ttf");
+}
 /*******************************************************************************
 *
 * General Deign
@@ -20,15 +31,49 @@ body {
 }
 .foo-button {
 	@extend .bounce;
-	animation-duration: 2.5s;
+	animation-duration: 5.5s;
   animation-iteration-count: infinite;
 }
+
 /*******************************************************************************
 *
 * Transitions & Animations
 *
 *****************************************************************************/
+@-webkit-keyframes hover {
+	0% {
+	 bottom:-10px
+	}
+	50% {
+	 bottom:-20px
+	}
+	100% {
+	 bottom:-10px
+	}
+ }
 
+ @keyframes hover {
+	0% {
+	 bottom:-10px
+	}
+	50% {
+	 bottom:-20px
+	}
+	100% {
+	 bottom:-10px
+	}
+ }
+
+.foo-hover {
+	position:relative;
+	-webkit-animation: hover 2s ease infinite;
+	animation:hover 2s ease infinite;
+}
+.hover {
+	position:relative;
+	-webkit-animation: hover 2s ease infinite;
+	animation:hover 2s ease infinite;
+}
 /******************************************************************************
 * Pages
 *****************************************************************************/

@@ -19,7 +19,7 @@
           class="button--grey">GitHub</a>
           <nuxt-link to="/">home</nuxt-link>
           
-          <b-button @click="incrementMusic" variant="outline-info" class="m-1 foo-button" size="lg">
+          <b-button @click="incrementMusic" variant="outline-info" class="m-1 foo-hover" size="lg">
             Foo <i class="fab fa-github">{{ musicCount }}</i>
           </b-button>
       </div>
@@ -33,6 +33,13 @@ import axios from 'axios'
 import { mapMutations, mapState } from 'vuex'
 
 export default {
+  mounted () {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+
+      setTimeout(() => this.$nuxt.$loading.finish(), 1000)
+    })
+  },
   computed: {
    /* musicCount()
     {

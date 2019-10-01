@@ -29,8 +29,15 @@
 <script>
 import AppLogo from '~/components/AppLogo.vue'
 import axios from 'axios'
-
+ 
 export default {
+  mounted () {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+
+      setTimeout(() => this.$nuxt.$loading.finish(), 1000)
+    })
+  },
   components: {
     AppLogo
   },
