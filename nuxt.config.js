@@ -13,10 +13,18 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  css: [
+    '@/assets/sass/main.scss',
+  ],
   /*
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+  /*
+  ** Modules configuration
+  * all bootstrap assets for pages are exported here
+  */
+  modules: ['bootstrap-vue/nuxt'],
   /*
   ** Build configuration
   */

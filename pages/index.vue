@@ -17,6 +17,10 @@
           href="https://github.com/nuxt/nuxt.js"
           target="_blank"
           class="button--grey">GitHub</a>
+          <router-link to="/foo">foo</router-link>
+          <b-button variant="outline-info" class="m-1" size="lg">
+            Show alert with count-down timer
+          </b-button>
       </div>
     </div>
   </section>
@@ -24,10 +28,14 @@
 
 <script>
 import AppLogo from '~/components/AppLogo.vue'
+import axios from 'axios'
 
 export default {
   components: {
     AppLogo
+  },
+  head: {
+    title: 'ssr update frontend'
   }
 }
 </script>

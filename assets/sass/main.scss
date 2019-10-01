@@ -1,0 +1,46 @@
+@import 'variables.scss', 'animate.scss', '../fontawesome-5/css/all.min.css';
+
+/*******************************************************************************
+*
+* General Deign
+*
+*****************************************************************************/
+html,
+body {
+  width: 100%;
+	height: 100%;
+	line-height: 1.5;
+	background-color: $theme-color-white;
+	color: $theme-text-color-black;
+	font-family: $theme-font-regular;
+	font-size: $body-font-size;
+	padding: 0;
+	margin: 0;
+	letter-spacing: 0.08em;
+}
+.foo-button {
+	@extend .bounce;
+	animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+}
+/*******************************************************************************
+*
+* Transitions & Animations
+*
+*****************************************************************************/
+
+/******************************************************************************
+* Pages
+*****************************************************************************/
+.page-enter-active, .page-leave-active {
+	transition: .5s;
+	animation-duration: 1s;
+}
+.page-enter-active {
+	@extend .slideInLeft;
+}
+.page-leave-to {
+	@extend .slideOutLeft;
+	opacity: 0;
+}
+@import 'responsive.scss';
