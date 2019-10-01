@@ -10,7 +10,8 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Frontend for Ijaya Management' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/png', href: '/ijaya-black.png' },
+     // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
   css: [
@@ -22,7 +23,7 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
+  loading: { color: '#3B8070',},
   /*
   ** Modules configuration
   * all bootstrap assets for pages are exported here
