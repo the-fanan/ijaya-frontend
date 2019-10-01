@@ -17,10 +17,10 @@
           href="https://github.com/nuxt/nuxt.js"
           target="_blank"
           class="button--grey">GitHub</a>
-          <router-link to="/foo">foo</router-link>
+          <nuxt-link to="/">home</nuxt-link>
           
-          <b-button variant="outline-info" class="m-1 foo-button" size="lg">
-            Foo <i class="fab fa-github"></i>
+          <b-button @click="incrementMusic" variant="outline-info" class="m-1 foo-button" size="lg">
+            Foo <i class="fab fa-github">{{ musicCount }}</i>
           </b-button>
       </div>
     </div>
@@ -30,8 +30,19 @@
 <script>
 import AppLogo from '~/components/AppLogo.vue'
 import axios from 'axios'
+import { mapMutations, mapState } from 'vuex'
 
 export default {
+  computed: {
+   /* musicCount()
+    {
+      return this.$store.state.music.counter
+    },*/
+    ...mapState({musicCount: state => state.music.counter}),
+  },
+  methods: {
+    ...mapMutations({incrementMusic: 'music/increment'}),
+  },
   components: {
     AppLogo
   },

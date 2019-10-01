@@ -16,6 +16,9 @@ module.exports = {
   css: [
     '@/assets/sass/main.scss',
   ],
+  plugins: [
+    {src: '~/plugins/localStorage.js', ssr: false},
+  ],
   /*
   ** Customize the progress bar color
   */

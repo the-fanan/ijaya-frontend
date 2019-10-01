@@ -17,7 +17,7 @@
           href="https://github.com/nuxt/nuxt.js"
           target="_blank"
           class="button--grey">GitHub</a>
-          <router-link to="/foo">foo</router-link>
+          <nuxt-link to="/foo">foo</nuxt-link>
           <b-button variant="outline-info" class="m-1" size="lg">
             Show alert with count-down timer
           </b-button>
