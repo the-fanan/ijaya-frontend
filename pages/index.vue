@@ -1,29 +1,102 @@
 <template>
-  <section class="container">
-    <div>
-      <app-logo/>
-      <h1 class="title">
-        ssr-frontend
-      </h1>
-      <h2 class="subtitle">
-        Frontend for Ijaya Management
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-          <nuxt-link to="/foo">foo</nuxt-link>
-          <b-button variant="outline-info" class="m-1" size="lg">
-            Show alert with count-down timer
-          </b-button>
+  <div>
+    <section class="container">
+      <div>
+        <app-logo/>
+        <h1 class="title">
+          ssr-frontend
+        </h1>
+        <h2 class="subtitle">
+          Frontend for Ijaya Management
+        </h2>
+        <div class="links">
+          <a
+            href="https://nuxtjs.org/"
+            target="_blank"
+            class="button--green">Documentation</a>
+          <a
+            href="https://github.com/nuxt/nuxt.js"
+            target="_blank"
+            class="button--grey">GitHub</a>
+            <nuxt-link to="/foo">foo</nuxt-link>
+            <b-button variant="outline-info" class="m-1" size="lg">
+              Show alert with count-down timer
+            </b-button>
+        </div>
       </div>
-    </div>
-  </section>
+      <div>
+        <app-logo/>
+        <h1 class="title">
+          ssr-frontend
+        </h1>
+        <h2 class="subtitle">
+          Frontend for Ijaya Management
+        </h2>
+        <div class="links">
+          <a
+            href="https://nuxtjs.org/"
+            target="_blank"
+            class="button--green">Documentation</a>
+          <a
+            href="https://github.com/nuxt/nuxt.js"
+            target="_blank"
+            class="button--grey">GitHub</a>
+            <nuxt-link to="/foo">foo</nuxt-link>
+            <b-button variant="outline-info" class="m-1" size="lg">
+              Show alert with count-down timer
+            </b-button>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <div>
+        <app-logo/>
+        <h1 class="title">
+          ssr-frontend
+        </h1>
+        <h2 class="subtitle">
+          Frontend for Ijaya Management
+        </h2>
+        <div class="links">
+          <a
+            href="https://nuxtjs.org/"
+            target="_blank"
+            class="button--green">Documentation</a>
+          <a
+            href="https://github.com/nuxt/nuxt.js"
+            target="_blank"
+            class="button--grey">GitHub</a>
+            <nuxt-link to="/foo">foo</nuxt-link>
+            <b-button variant="outline-info" class="m-1" size="lg">
+              Show alert with count-down timer
+            </b-button>
+        </div>
+      </div>
+      <div>
+        <app-logo/>
+        <h1 class="title">
+          ssr-frontend
+        </h1>
+        <h2 class="subtitle">
+          Frontend for Ijaya Management
+        </h2>
+        <div class="links">
+          <a
+            href="https://nuxtjs.org/"
+            target="_blank"
+            class="button--green">Documentation</a>
+          <a
+            href="https://github.com/nuxt/nuxt.js"
+            target="_blank"
+            class="button--grey">GitHub</a>
+            <nuxt-link to="/foo">foo</nuxt-link>
+            <b-button variant="outline-info" class="m-1" size="lg">
+              Show alert with count-down timer
+            </b-button>
+        </div>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>

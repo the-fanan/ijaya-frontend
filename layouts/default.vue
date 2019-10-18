@@ -1,12 +1,14 @@
 <template>
   <div>
+    <nav-bar></nav-bar>
     <nuxt/>
   </div>
 </template>
 
 <script>
-import { mapMutations, mapState } from 'vuex'
+import { mapMutations } from 'vuex'
 import _ from 'lodash'
+import NavBar from '~/components/shared/NavBar.vue'
 
 export default {
     created()
@@ -18,9 +20,6 @@ export default {
     mounted(){
      // alert(this.nav.show)
     },
-    computed: {
-      ...mapState({nav: state => state.nav}),
-    },
     methods:{
       ...mapMutations({navBarHandleScroll: 'nav/handleScroll'}),
     },
@@ -30,6 +29,9 @@ export default {
         window.removeEventListener('scroll', this.navBarHandleScroll);
       }
     },
+    components: {
+    NavBar
+  },
 }
 </script>
 

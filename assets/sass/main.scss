@@ -35,6 +35,32 @@ body {
   animation-iteration-count: infinite;
 }
 
+/******************************************************************************
+* Nav Bar
+*****************************************************************************/
+.ij-nav {
+	color: #000;
+	background: transparent;
+	transition: 0.6s;
+
+	a.navbar-brand {
+		color: #000;
+	}
+
+	&.nav-fade-in {
+		-webkit-animation: fadeIn 1s ease;
+		animation:fadeIn 1s ease;
+	}
+
+	&.nav-fade-out {
+		-webkit-animation: fadeOut 1s ease;
+		animation:fadeOut 1s ease;
+	}
+
+	&.min-padding {
+		padding: 0;
+	}
+}
 /*******************************************************************************
 *
 * Transitions & Animations
