@@ -10,8 +10,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Music talent management house' }
     ],
     link: [
-     { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-     { rel: 'icon', type: 'image/png', href: '/ijaya-black.png' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     ]
   },
   css: [
