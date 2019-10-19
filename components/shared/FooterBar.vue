@@ -2,10 +2,10 @@
 	<b-navbar class="ij-footer" toggleable="lg" type="dark" variant="dark" >
 		<b-container :fluid="true">
 			<b-row class="justify-content-between">
-				<b-col md="4" cols="12">
+				<b-col md="4" cols="6">
 					<p class="copy-text d-flex h-100 align-items-center">&copy; 2019 Ijaya Management. All rights reserved.</p>
 				</b-col>
-				<b-col cols="12" md="4">
+				<b-col cols="6" md="4">
 					<div class="d-flex justify-content-center h-100 align-items-center">
 						<img class="footer-logo" src="~/assets/images/logos/ijaya-full-white-cropped.png" alt="Ijaya Logo"/>
 					</div>
