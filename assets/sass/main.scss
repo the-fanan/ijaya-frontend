@@ -36,6 +36,28 @@ body {
   animation-iteration-count: infinite;
 }
 
+.section-bottom-links {
+	border: 3px solid #CA0E0E;
+	color: #fff;
+	background-color: #CA0E0E;
+	position: absolute;
+	padding: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 20px;
+	z-index: 10;
+	right: 100px;
+	bottom: 0;
+	transition: .6s;
+	font-weight: bold;
+
+	&:hover {
+		background-color: transparent;
+		color: #CA0E0E;
+		text-decoration: none;
+		text-shadow: #fff;
+	}
+}
 /******************************************************************************
 * Nav Bar
 *****************************************************************************/
@@ -191,11 +213,14 @@ body {
 
 .artistes-parallax {
 	overflow: hidden;
+	position: relative;
 
 	.artistes-parallax-image {
 		width: 100%;
 		img {
 			width: 100%;
+			z-index: 0;
+			position: relative;
 		}
 	}
 }
