@@ -138,7 +138,6 @@ body {
 	@extend .slideOutLeft;
 	opacity: 0;
 }
-@import 'responsive.scss';
 
 /*******************************************************************************
 *
@@ -177,6 +176,12 @@ body {
 
 		p {
 			margin: -15px;
+			font-weight: bold;
 		}
 	}
 }
+.col {
+	padding: 0;
+}
+
+@import 'responsive.scss';

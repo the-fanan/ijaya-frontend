@@ -15,8 +15,8 @@
 					<b-nav-item right to="/music">
 						Music
 					</b-nav-item>
-					<b-nav-item right to="/artists">
-						Artists
+					<b-nav-item right to="/artistes">
+						Artistes
 					</b-nav-item>
 					<b-nav-item right to="/contact">
 						Contact
