@@ -9,10 +9,24 @@
     <b-row>
       <b-col>
         <b-container>
-          <b-row class="justify-content-start">
-            <b-col>
-
-
+          <b-row>
+            <b-col class="newsletter-section">
+              <b-row class="justify-content-center">
+                <b-col md="9" cols="12" class="newsletter-input">
+                  <div class="form-group">
+                    <input class="form-control" placeholder="Name"/>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" placeholder="Email Address"/>
+                  </div>
+                  <div class="form-group">
+                    <textarea class="form-control" placeholder="Message"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <button>Contact Us</button>
+                  </div>
+                </b-col>
+              </b-row>
             </b-col>
           </b-row>
         </b-container>
