@@ -16,6 +16,7 @@
 * General Deign
 *
 *****************************************************************************/
+//#262634
 html,
 body {
   width: 100%;
@@ -84,6 +85,10 @@ body {
 			.nav-link {
 				color: #fff;
 				font-size: 18px;
+				transition: .5s;
+				&:hover {
+					color: #CA0E0E;
+				}
 				&.nuxt-link-active {
 					opacity: 0.7;
 				}
@@ -106,6 +111,41 @@ body {
 		padding: 0;
 		padding-left: 15px;
 		padding-right: 15px;
+	}
+}
+
+.ij-footer {
+	padding-bottom: 15px;
+	.row {
+		width: 100%;
+	}
+	img.footer-logo {
+		width: 100px;
+		display: block;
+		margin-bottom: 10px;
+	}
+	.copy-text {
+		color: #fff;
+	}
+
+	ul.social-links {
+		list-style-type: none;
+		padding: 0;
+
+		li {
+			display: inline-block;
+			margin-left: 15px;
+
+			a {
+				font-size: 16px;
+				color: #fff;
+				
+				&:hover {
+					text-decoration: none;
+					opacity: .7;
+				}
+			}
+		}
 	}
 }
 /*******************************************************************************

@@ -2,6 +2,7 @@
   <div>
     <nav-bar></nav-bar>
     <nuxt/>
+    <footer-bar></footer-bar>
   </div>
 </template>
 
@@ -9,7 +10,7 @@
 import { mapMutations } from 'vuex'
 import _ from 'lodash'
 import NavBar from '~/components/shared/NavBar.vue'
-
+import FooterBar from '~/components/shared/FooterBar.vue'
 export default {
     created()
     {
@@ -30,7 +31,8 @@ export default {
       }
     },
     components: {
-    NavBar
+    NavBar, 
+    FooterBar
   },
 }
 </script>
