@@ -14,7 +14,7 @@ export default {
     created()
     {
       if (process.browser) { 
-        window.addEventListener('scroll', _.debounce(this.navBarHandleScroll, 500));
+        window.addEventListener('scroll', _.debounce(this.navBarHandleScroll, 50));
       }
     },
     mounted(){

@@ -41,14 +41,31 @@ body {
 .ij-nav {
 	color: #000;
 	background: transparent;
-	transition: 0.6s;
+	transition: 1s;
+	padding: 0;
 	padding-left:10%;
+	padding-right:10%;
 
 	a.navbar-brand {
-		color: #000;
+		color: #fff;
 
 		img {
 			width: 130px;
+		}
+	}
+
+	.navbar-nav {
+		
+		.nav-item {
+			margin-right: 10px;
+			.nav-link {
+				color: #fff;
+				font-size: 18px;
+				&.nuxt-link-active {
+					opacity: 0.7;
+				}
+			}
+			
 		}
 	}
 
@@ -122,3 +139,29 @@ body {
 	opacity: 0;
 }
 @import 'responsive.scss';
+
+/*******************************************************************************
+*
+* Home Page
+*
+*****************************************************************************/
+.hero {
+	height: 100vh;
+	overflow: hidden;
+	padding: 0;
+	img {
+		position: absolute;
+		width: 100%;
+		transition: 1s;
+
+		&.fade-in-animation {
+			-webkit-animation: fadeIn 6s ease;
+			animation:fadeIn 6s ease;
+		}
+
+		&.fade-out-animation {
+			-webkit-animation: fadeOut 6s ease;
+			animation:fadeOut 6s ease;
+		}
+	}
+}
