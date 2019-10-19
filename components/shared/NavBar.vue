@@ -9,7 +9,7 @@
 			<b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 			<b-collapse id="nav-collapse" is-nav>
 				<b-navbar-nav class="ml-auto">
-					<b-nav-item right to="/">
+					<b-nav-item right exact to="/">
 						Home
 					</b-nav-item>
 					<b-nav-item right to="/music">

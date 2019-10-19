@@ -1,35 +1,25 @@
 <template>
-  <section class="container">
-    <div>
-      <app-logo/>
-      <h1 class="title">
-        SSR Artists
-      </h1>
-      <h2 class="subtitle">
-        Frontend for Ijaya Management
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-          <nuxt-link to="/">home</nuxt-link>
-          
-          <b-button @click="incrementMusic" variant="outline-info" class="m-1 foo-hover" size="lg">
-            Foo <i class="fab fa-github">{{ music.counter }}</i>
-          </b-button>
-      </div>
-    </div>
-  </section>
+  <b-container :fluid="true">
+    <!--heading -->
+    <b-row>
+      <b-col class="page-heading">
+        <h1 class="text-white">Artistes</h1>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col>
+        <b-container>
+          <b-row class="justify-content-start">
+            <b-col md="4" cols="12">
+            </b-col>
+          </b-row>
+        </b-container>
+      </b-col>
+    </b-row>
+  </b-container>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
-import axios from 'axios'
 import { mapMutations, mapState } from 'vuex'
 
 export default {
@@ -41,48 +31,15 @@ export default {
     })
   },
   computed: {
-    ...mapState({music: state => state.music}),
+    ...mapState({artists: state => state.artists}),
   },
   methods: {
-    ...mapMutations({incrementMusic: 'music/increment'}),
+    ...mapMutations({incrementArtist: 'artists/increment'}),
   },
   components: {
-    AppLogo
   },
   head: {
-    title: 'ssr foo'
+    title: 'Ijaya Artistes'
   }
 }
 </script>
-
-<style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
-
