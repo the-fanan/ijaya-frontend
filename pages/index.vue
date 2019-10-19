@@ -1,5 +1,5 @@
 <template>
-  <b-container fluid="true">
+  <b-container :fluid="true">
     <b-row>
       <b-col class="hero">
         <transition name="hero-images-transition"
@@ -11,14 +11,20 @@
         >
           <img class="responsive" :src="heroImages[currentHeroImage].src" v-bind:key="heroImages[currentHeroImage].name"/>
         </transition>
+        <b-row class="hero-scroll-down-holder">
+          <b-col class="d-flex justify-content-center">
+            <span class="text-white text-center">
+              <p class="text-center">Scroll Down</p>
+              <i class="hover fa fa-chevron-down"></i>
+            </span>
+          </b-col>
+        </b-row>
       </b-col>
     </b-row>
   </b-container>
 </template>
 
-<script>
-import axios from 'axios'
- 
+<script> 
 export default {
   data() {
     return {

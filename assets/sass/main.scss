@@ -149,11 +149,14 @@ body {
 	height: 100vh;
 	overflow: hidden;
 	padding: 0;
+	position: relative;
+
 	img {
 		position: absolute;
 		width: 100%;
+		height: auto;
 		transition: 1s;
-
+		z-index: 0;
 		&.fade-in-animation {
 			-webkit-animation: fadeIn 6s ease;
 			animation:fadeIn 6s ease;
@@ -162,6 +165,18 @@ body {
 		&.fade-out-animation {
 			-webkit-animation: fadeOut 6s ease;
 			animation:fadeOut 6s ease;
+		}
+	}
+
+	.hero-scroll-down-holder {
+		width: 100%;
+		z-index: 10;
+		position: absolute;
+		bottom: 20px;
+		margin: 0;
+
+		p {
+			margin: -15px;
 		}
 	}
 }
