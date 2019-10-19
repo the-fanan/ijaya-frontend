@@ -23,7 +23,7 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#CA0E0E', height: '3px'},
+  loading: { color: '#CA0E0E', height: '5px'},
   /*
   ** Modules configuration
   * all bootstrap assets for pages are exported here
