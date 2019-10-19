@@ -18,6 +18,7 @@ module.exports = {
   ],
   plugins: [
     {src: '~/plugins/localStorage.js', ssr: false},
+    {src: '~/plugins/parallax.js', ssr: false},
   ],
   /*
   ** Customize the progress bar color
