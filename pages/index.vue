@@ -37,7 +37,7 @@
               <img src="~/assets/images/music/angel-ash.jpg" class="music-image"/>
             </div>
             <div class="d-flex justify-content-between music-artiste text-white">
-              <p class="artiste"><nuxt-link to="/artistes" class="text-white">Dremdo</nuxt-link> <span class="feature">ft Looper</span></p> <a href="#" class="text-white">Listen</a>
+              <p class="artiste"><nuxt-link to="/artistes/dremdo" class="text-white">Dremdo</nuxt-link> <span class="feature">ft Looper</span></p> <a href="#" class="text-white">Listen</a>
             </div>
           </b-col>
            <b-col md="4">
@@ -46,7 +46,7 @@
               <img src="~/assets/images/music/cello-boy.jpg" class="music-image"/>
             </div>
             <div class="d-flex justify-content-between music-artiste text-white">
-              <p class="artiste"><nuxt-link to="/artistes" class="text-white">Cierro</nuxt-link></p> <a href="#" class="text-white">Listen</a>
+              <p class="artiste"><nuxt-link to="/artistes/dremdo" class="text-white">Cierro</nuxt-link></p> <a href="#" class="text-white">Listen</a>
             </div>
           </b-col>
         </b-row>

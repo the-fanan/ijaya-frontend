@@ -18,7 +18,7 @@
                     <i class="fa fa-music"></i>
                     <span>
                       <p class="song-title">Drifting</p>
-                      <p class="artiste"><nuxt-link to="/artistes">Dremdo</nuxt-link></p>
+                      <p class="artiste"><nuxt-link to="/artistes/dremdo">Dremdo</nuxt-link></p>
                     </span>
                   </p>
                 </div>
@@ -33,7 +33,7 @@
                     <i class="fa fa-music"></i>
                     <span>
                       <p class="song-title">Angel Ash</p>
-                      <p class="artiste"><nuxt-link to="/artistes">Dremdo</nuxt-link></p>
+                      <p class="artiste"><nuxt-link to="/artistes/dremdo">Dremdo</nuxt-link></p>
                     </span>
                   </p>
                 </div>
@@ -48,7 +48,7 @@
                     <i class="fa fa-music"></i>
                     <span>
                       <p class="song-title">Cello Girl</p>
-                      <p class="artiste"><nuxt-link to="/artistes">Dremdo</nuxt-link></p>
+                      <p class="artiste"><nuxt-link to="/artistes/dremdo">Dremdo</nuxt-link></p>
                     </span>
                   </p>
                 </div>
@@ -63,7 +63,7 @@
                     <i class="fa fa-music"></i>
                     <span>
                       <p class="song-title">Guitar Boy</p>
-                      <p class="artiste"><nuxt-link to="/artistes">Dremdo</nuxt-link></p>
+                      <p class="artiste"><nuxt-link to="/artistes/dremdo">Dremdo</nuxt-link></p>
                     </span>
                   </p>
                 </div>

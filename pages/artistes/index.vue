@@ -17,7 +17,7 @@
                   <p class="text-white text-center">
                     <i class="fa fa-microphone"></i>
                     <span>
-                      <p class="artiste"><nuxt-link to="/artistes">Dremdo</nuxt-link></p>
+                      <p class="artiste"><nuxt-link to="/artistes/dremdo">Dremdo</nuxt-link></p>
                     </span>
                   </p>
                 </div>
@@ -31,7 +31,7 @@
                   <p class="text-white text-center">
                     <i class="fa fa-microphone"></i>
                     <span>
-                      <p class="artiste"><nuxt-link to="/artistes">Dremdo</nuxt-link></p>
+                      <p class="artiste"><nuxt-link to="/artistes/dremdo">Dremdo</nuxt-link></p>
                     </span>
                   </p>
                 </div>
@@ -45,7 +45,7 @@
                   <p class="text-white text-center">
                     <i class="fa fa-microphone"></i>
                     <span>
-                      <p class="artiste"><nuxt-link to="/artistes">Dremdo</nuxt-link></p>
+                      <p class="artiste"><nuxt-link to="/artistes/dremdo">Dremdo</nuxt-link></p>
                     </span>
                   </p>
                 </div>
@@ -59,7 +59,7 @@
                   <p class="text-white text-center">
                     <i class="fa fa-microphone"></i>
                     <span>
-                      <p class="artiste"><nuxt-link to="/artistes">Dremdo</nuxt-link></p>
+                      <p class="artiste"><nuxt-link to="/artistes/dremdo">Dremdo</nuxt-link></p>
                     </span>
                   </p>
                 </div>
