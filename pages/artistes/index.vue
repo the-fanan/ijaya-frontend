@@ -9,8 +9,61 @@
     <b-row>
       <b-col>
         <b-container>
-          <b-row class="justify-content-start">
+          <b-row class="justify-content-start music-row">
             <b-col md="4" cols="12">
+              <div class="music-holder shadow-lg">
+                <img class="music-image" src="~/assets/images/music/drifting.jpg"/>
+                <div class="music-details d-flex h-100 align-items-center">
+                  <p class="text-white text-center">
+                    <i class="fa fa-microphone"></i>
+                    <span>
+                      <p class="artiste"><nuxt-link to="/artistes">Dremdo</nuxt-link></p>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </b-col>
+
+            <b-col md="4" cols="12">
+              <div class="music-holder shadow-lg">
+                <img class="music-image" src="~/assets/images/music/angel-ash.jpg"/>
+                <div class="music-details d-flex h-100 align-items-center">
+                  <p class="text-white text-center">
+                    <i class="fa fa-microphone"></i>
+                    <span>
+                      <p class="artiste"><nuxt-link to="/artistes">Dremdo</nuxt-link></p>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </b-col>
+
+            <b-col md="4" cols="12">
+              <div class="music-holder shadow-lg">
+                <img class="music-image" src="~/assets/images/music/cello-girl.jpg"/>
+                <div class="music-details d-flex h-100 align-items-center">
+                  <p class="text-white text-center">
+                    <i class="fa fa-microphone"></i>
+                    <span>
+                      <p class="artiste"><nuxt-link to="/artistes">Dremdo</nuxt-link></p>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </b-col>
+
+            <b-col md="4" cols="12">
+              <div class="music-holder shadow-lg">
+                <img class="music-image" src="~/assets/images/music/guitar-boy.jpg"/>
+                <div class="music-details d-flex h-100 align-items-center">
+                  <p class="text-white text-center">
+                    <i class="fa fa-microphone"></i>
+                    <span>
+                      <p class="artiste"><nuxt-link to="/artistes">Dremdo</nuxt-link></p>
+                    </span>
+                  </p>
+                </div>
+              </div>
             </b-col>
           </b-row>
         </b-container>
