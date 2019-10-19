@@ -28,6 +28,7 @@ body {
 	padding: 0;
 	margin: 0;
 	letter-spacing: 0.08em;
+	scroll-behavior: smooth;
 }
 .foo-button {
 	@extend .bounce;
@@ -174,14 +175,29 @@ body {
 		bottom: 20px;
 		margin: 0;
 
-		p {
-			margin: -15px;
-			font-weight: bold;
-		}
+		.clicker {
+			cursor: pointer;
+
+			p {
+				margin: -15px;
+				font-weight: bold;	
+			}
+		}	
 	}
 }
 .col {
 	padding: 0;
+}
+
+.artistes-parallax {
+	overflow: hidden;
+
+	.artistes-parallax-image {
+		width: 100%;
+		img {
+			width: 100%;
+		}
+	}
 }
 
 @import 'responsive.scss';
