@@ -21,17 +21,27 @@
         </b-row>
       </b-col>
     </b-row>
+
+    <b-row>
+      <b-col>
+        <parallax>
+          <img src="~/assets/images/artistes/artist-band.jpg" alt="artistes">
+        </parallax>
+      </b-col>
+    </b-row>
   </b-container>
 </template>
 
 <script> 
+import Parallax from "~/plugins/parallax";
+
 export default {
   data() {
     return {
       heroImages: [
-        {src: "/_nuxt/assets/images/heros/amplifier.jpg", name:"amplifier"},
-        {src: "/_nuxt/assets/images/heros/audience.jpg", name:"audience"}, 
-        {src: "/_nuxt/assets/images/heros/record.jpg", name:"record"},
+        {src: require("~/assets/images/heros/amplifier.jpg"), name:"amplifier"},
+        {src: require("~/assets/images/heros/audience.jpg"), name:"audience"}, 
+        {src: require("~/assets/images/heros/record.jpg"), name:"record"},
         ],
       currentHeroImage: 0,
     }
@@ -46,8 +56,11 @@ export default {
   methods: {
     changeHeroImage()
     {
-      setTimeout(() => {this.currentHeroImage = (this.currentHeroImage + 1) % this.heroImages.length;}, 5000)
+      setTimeout(() => {this.currentHeroImage = (this.currentHeroImage + 1) % this.heroImages.length;}, 3000)
     }
+  },
+  components: {
+    Parallax
   }
 }
 </script>
