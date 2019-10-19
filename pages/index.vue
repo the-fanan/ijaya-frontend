@@ -50,13 +50,13 @@
             </div>
           </b-col>
         </b-row>
-        <nuxt-link class="section-bottom-links" to="/music">View All Music</nuxt-link>
+        <nuxt-link class="section-bottom-links top" to="/music">View All Music</nuxt-link>
       </b-col>
     </b-row>
     <!--Shows-->
-    <b-row>
+    <!--b-row>
       <b-col class="shows-section">
-        <!--b-row class="justify-content-center">
+        <b-row class="justify-content-center">
           <b-col md="9">
             <h1 class="text-white section-title">Shows</h1>
           </b-col>
@@ -65,9 +65,9 @@
           <b-col md="8">
             <h2 class="text-white">No shows currently available</h2>
           </b-col>
-        </b-row-->
+        </b-row>
       </b-col>
-    </b-row>
+    </b-row-->
     <b-row>
       <b-col class="col-no-padding">
         <parallax :speedFactor="0.3" :sectionHeight="60" sectionClass="artistes-parallax" containerClass="artistes-parallax-image">
@@ -79,6 +79,22 @@
     <!--NewsLetter-->
     <b-row>
       <b-col class="newsletter-section">
+        <b-row class="justify-content-center">
+          <b-col md="3" cols="12">
+            <h1 class="text-white section-title">Subscribe To Our Newsletter</h1>
+          </b-col>
+          <b-col md="6" cols="12" class="newsletter-input">
+            <div class="form-group">
+              <input class="form-control" placeholder="Name"/>
+            </div>
+            <div class="form-group">
+              <input class="form-control" placeholder="Email Address"/>
+            </div>
+            <div class="form-group">
+              <button>Subscribe</button>
+            </div>
+          </b-col>
+        </b-row>
       </b-col>
     </b-row>
   </b-container>
