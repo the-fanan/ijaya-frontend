@@ -17,6 +17,7 @@
 						<li><a href="#"><i class="fab fa-youtube"></i></a></li>
 						<li><a href="#"><i class="fab fa-spotify"></i></a></li>
 						<li><a href="#"><i class="fab fa-soundcloud"></i></a></li>
+						<li><a href="#"><i class="fab fa-apple"></i></a></li>
 					</ul>
 				</b-col>
 			</b-row>

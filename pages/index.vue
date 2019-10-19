@@ -1,7 +1,7 @@
 <template>
   <b-container :fluid="true">
     <b-row>
-      <b-col class="hero" id="hero">
+      <b-col class="hero col-no-padding" id="hero">
         <transition name="hero-images-transition"
         enter-active-class="fade-in-animation"
 				leave-active-class="fade-out-animation"
@@ -22,13 +22,63 @@
         </b-row>
       </b-col>
     </b-row>
-
+    <!-- Music Row -->
     <b-row>
-      <b-col>
+      <b-col class="music-section">
+        <b-row class="justify-content-center">
+          <b-col md="9">
+            <h1 class="text-white section-title">New Music</h1>
+          </b-col>
+        </b-row>
+        <b-row class="justify-content-center">
+          <b-col md="4">
+            <h2 class="text-white music-title">Angel Ash</h2>
+            <div class="music-image-holder shadow-lg">
+              <img src="~/assets/images/music/angel-ash.jpg" class="music-image"/>
+            </div>
+            <div class="d-flex justify-content-between music-artiste text-white">
+              <p class="artiste"><nuxt-link to="/artistes" class="text-white">Dremdo</nuxt-link> <span class="feature">ft Looper</span></p> <a href="#" class="text-white">Listen</a>
+            </div>
+          </b-col>
+           <b-col md="4">
+            <h2 class="text-white music-title">Cello Boy</h2>
+            <div class="music-image-holder shadow-lg">
+              <img src="~/assets/images/music/cello-boy.jpg" class="music-image"/>
+            </div>
+            <div class="d-flex justify-content-between music-artiste text-white">
+              <p class="artiste"><nuxt-link to="/artistes" class="text-white">Cierro</nuxt-link></p> <a href="#" class="text-white">Listen</a>
+            </div>
+          </b-col>
+        </b-row>
+        <nuxt-link class="section-bottom-links" to="/music">View All Music</nuxt-link>
+      </b-col>
+    </b-row>
+    <!--Shows-->
+    <b-row>
+      <b-col class="shows-section">
+        <!--b-row class="justify-content-center">
+          <b-col md="9">
+            <h1 class="text-white section-title">Shows</h1>
+          </b-col>
+        </b-row>
+        <b-row class="justify-content-center">
+          <b-col md="8">
+            <h2 class="text-white">No shows currently available</h2>
+          </b-col>
+        </b-row-->
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col class="col-no-padding">
         <parallax :speedFactor="0.3" :sectionHeight="60" sectionClass="artistes-parallax" containerClass="artistes-parallax-image">
           <img src="~/assets/images/artistes/artist-band.jpg" alt="artistes">
         </parallax>
         <nuxt-link class="section-bottom-links" to="/artistes">View All Artistes</nuxt-link>
+      </b-col>
+    </b-row>
+    <!--NewsLetter-->
+    <b-row>
+      <b-col class="newsletter-section">
       </b-col>
     </b-row>
   </b-container>
@@ -63,7 +113,7 @@ export default {
     scrollFromHero()
     {
       let hero = document.getElementById("hero");
-      let scrollTo = hero.offsetTop + hero.scrollHeight
+      let scrollTo =  hero.scrollHeight
       window.scrollTo(0, scrollTo)
     },
   },
