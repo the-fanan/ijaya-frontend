@@ -91,6 +91,10 @@ ul.social-links {
 		}
 	}
 }
+
+.text-#{$app-name}, a.text-#{$app-name} {
+	color: $theme-color;
+}
 /******************************************************************************
 * Nav Bar
 *****************************************************************************/
@@ -354,6 +358,10 @@ ul.social-links {
 .music-row {
 	padding-top: 100px;
 	padding-bottom: 100px;
+	&.artiste {
+		padding-top: 0;
+		padding-bottom: 20px;
+	}
 
 	.music-holder {
 		width: 100%;
@@ -451,6 +459,17 @@ ul.social-links {
 					text-shadow: #fff;
 				}
 			}
+		}
+	}
+	.artiste-description {
+		padding: 60px;
+		color: #fff;
+		position: relative;
+		height: 100vh;
+		overflow-x: scroll;
+
+		.release-heading {
+			padding-top: 30px;
 		}
 	}
 }

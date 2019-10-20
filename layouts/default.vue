@@ -19,7 +19,6 @@ export default {
       }
     },
     mounted(){
-     // alert(this.nav.show)
     },
     methods:{
       ...mapMutations({navBarHandleScroll: 'nav/handleScroll'}),

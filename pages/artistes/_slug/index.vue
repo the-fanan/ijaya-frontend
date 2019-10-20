@@ -18,6 +18,96 @@
         </div>
       </b-col>
       <b-col md="6" cols="12">
+        <div class="artiste-description">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <div class="music-holder">
+             <b-container :fluid="true">
+              <b-row>
+                <b-col>
+                  <h1 class="text-ijaya release-heading">Releases</h1>
+                </b-col>
+              </b-row>
+              <b-row class="justify-content-start music-row artiste">
+                <b-col md="6" cols="12">
+                  <div class="music-holder shadow-lg">
+                    <img class="music-image" src="~/assets/images/music/drifting.jpg"/>
+                    <div class="music-details d-flex h-100 align-items-center">
+                      <p class="text-white text-center">
+                        <i class="fa fa-music"></i>
+                        <span>
+                          <p class="song-title">Drifting</p>
+                          <p class="artiste"><nuxt-link to="/artistes/dremdo">Dremdo</nuxt-link></p>
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </b-col>
+
+                <b-col md="6" cols="12">
+                  <div class="music-holder shadow-lg">
+                    <img class="music-image" src="~/assets/images/music/angel-ash.jpg"/>
+                    <div class="music-details d-flex h-100 align-items-center">
+                      <p class="text-white text-center">
+                        <i class="fa fa-music"></i>
+                        <span>
+                          <p class="song-title">Angel Ash</p>
+                          <p class="artiste"><nuxt-link to="/artistes/dremdo">Dremdo</nuxt-link></p>
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </b-col>
+
+                <b-col md="6" cols="12">
+                  <div class="music-holder shadow-lg">
+                    <img class="music-image" src="~/assets/images/music/cello-girl.jpg"/>
+                    <div class="music-details d-flex h-100 align-items-center">
+                      <p class="text-white text-center">
+                        <i class="fa fa-music"></i>
+                        <span>
+                          <p class="song-title">Cello Girl</p>
+                          <p class="artiste"><nuxt-link to="/artistes/dremdo">Dremdo</nuxt-link></p>
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </b-col>
+
+                <b-col md="6" cols="12">
+                  <div class="music-holder shadow-lg">
+                    <img class="music-image" src="~/assets/images/music/guitar-boy.jpg"/>
+                    <div class="music-details d-flex h-100 align-items-center">
+                      <p class="text-white text-center">
+                        <i class="fa fa-music"></i>
+                        <span>
+                          <p class="song-title">Guitar Boy</p>
+                          <p class="artiste"><nuxt-link to="/artistes/dremdo">Dremdo</nuxt-link></p>
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </b-col>
+              </b-row>
+            </b-container>
+          </div>
+        </div>
       </b-col>
 		</b-row>
 	</b-container>
@@ -76,6 +166,10 @@ export default {
         }
       }
       let fullName = whiteText + " " + redText
+      if (redText === "") {
+        redText = whiteText
+        whiteText = ""
+      }
       
       return {whiteText, redText, fullName}
     }
