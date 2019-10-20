@@ -71,6 +71,26 @@ body {
 		padding-left: 100px;
 	}
 }
+
+ul.social-links {
+	list-style-type: none;
+	padding: 0;
+
+	li {
+		display: inline-block;
+		margin-left: 15px;
+
+		a {
+			font-size: 16px;
+			color: #fff;
+			
+			&:hover {
+				text-decoration: none;
+				opacity: .7;
+			}
+		}
+	}
+}
 /******************************************************************************
 * Nav Bar
 *****************************************************************************/
@@ -139,26 +159,6 @@ body {
 	}
 	.copy-text {
 		color: #fff;
-	}
-
-	ul.social-links {
-		list-style-type: none;
-		padding: 0;
-
-		li {
-			display: inline-block;
-			margin-left: 15px;
-
-			a {
-				font-size: 16px;
-				color: #fff;
-				
-				&:hover {
-					text-decoration: none;
-					opacity: .7;
-				}
-			}
-		}
 	}
 }
 /*******************************************************************************
@@ -417,6 +417,44 @@ body {
 	}
 }
 /*******************************************************************************
-* Responsive Page
+*
+* Single Artist Page
+*
+*****************************************************************************/
+.single-artiste-row {
+	.image-col {
+		padding-left: 0;
+	}
+	.image-holder {
+		position: relative;
+		height: 100vh;
+		overflow:hidden;
+
+		img.artiste-image {
+			position: absolute;
+			width: 100%;
+		}
+
+		.artiste-summary {
+			position: absolute;
+			z-index: 10;
+			width: 100%;
+			bottom: 0;
+
+			h1.artiste-name{
+				font-family: $theme-font-bold;
+				color: #fff;
+				font-size: 45px;
+				text-shadow: #000;
+				span.red-text{
+					color: #CA0E0E;
+					text-shadow: #fff;
+				}
+			}
+		}
+	}
+}
+/*******************************************************************************
+* Responsive Design
 *****************************************************************************/
 @import 'responsive.scss';
