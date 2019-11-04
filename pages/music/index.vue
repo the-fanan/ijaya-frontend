@@ -10,60 +10,15 @@
       <b-col>
         <b-container>
           <b-row class="justify-content-start music-row">
-            <b-col md="4" cols="12">
+            <b-col md="4" cols="12" v-for="(music,index) in musics" v-bind:key="index">
               <div class="music-holder shadow-lg">
-                <img class="music-image" src="~/assets/images/music/drifting.jpg"/>
+                <img class="music-image" :src="music.image"/>
                 <div class="music-details d-flex h-100 align-items-center">
                   <p class="text-white text-center">
                     <i class="fa fa-music"></i>
                     <span>
-                      <p class="song-title">Drifting</p>
-                      <p class="artiste"><nuxt-link to="/artistes/dremdo">Dremdo</nuxt-link></p>
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </b-col>
-
-            <b-col md="4" cols="12">
-              <div class="music-holder shadow-lg">
-                <img class="music-image" src="~/assets/images/music/angel-ash.jpg"/>
-                <div class="music-details d-flex h-100 align-items-center">
-                  <p class="text-white text-center">
-                    <i class="fa fa-music"></i>
-                    <span>
-                      <p class="song-title">Angel Ash</p>
-                      <p class="artiste"><nuxt-link to="/artistes/dremdo">Dremdo</nuxt-link></p>
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </b-col>
-
-            <b-col md="4" cols="12">
-              <div class="music-holder shadow-lg">
-                <img class="music-image" src="~/assets/images/music/cello-girl.jpg"/>
-                <div class="music-details d-flex h-100 align-items-center">
-                  <p class="text-white text-center">
-                    <i class="fa fa-music"></i>
-                    <span>
-                      <p class="song-title">Cello Girl</p>
-                      <p class="artiste"><nuxt-link to="/artistes/dremdo">Dremdo</nuxt-link></p>
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </b-col>
-
-            <b-col md="4" cols="12">
-              <div class="music-holder shadow-lg">
-                <img class="music-image" src="~/assets/images/music/guitar-boy.jpg"/>
-                <div class="music-details d-flex h-100 align-items-center">
-                  <p class="text-white text-center">
-                    <i class="fa fa-music"></i>
-                    <span>
-                      <p class="song-title">Guitar Boy</p>
-                      <p class="artiste"><nuxt-link to="/artistes/dremdo">Dremdo</nuxt-link></p>
+                      <p class="song-title"><a class="text-white" target="blank" :href="music.link">{{music.title}}</a> <span v-show="music.ft !== ''">ft. {{ music.ft }}</span></p>
+                      <p class="artiste"><nuxt-link :to="'/artistes/' + music.artisteSlug">{{music.artiste}}</nuxt-link></p>
                     </span>
                   </p>
                 </div>
@@ -80,6 +35,18 @@
 import { mapMutations, mapState } from 'vuex'
 
 export default {
+  data() {
+    return {
+      musics: [
+        {title: "Dumb", link: "https://open.spotify.com/album/77GHxa29YSiZU26HqXDAmB", image: require("~/assets/images/music/dumb-ft-grove.jpeg"), artiste: "Jess ETA", artisteSlug: "jess-eta", ft: "Grove"},
+        {title: "E.T.A.", link: "https://open.spotify.com/album/1ZBWO099OEa7mzLvWOTv50", image: require("~/assets/images/music/ETA.jpeg"), artiste: "Jess ETA", artisteSlug: "jess-eta", ft: ""},
+        {title: "Fire", link: "https://open.spotify.com/album/3uhHPmUhCO1x3e9N79DCol", image: require("~/assets/images/music/fire.jpeg"), artiste: "Jess ETA", artisteSlug: "jess-eta", ft: ""},
+        {title: "Loco", link: "https://open.spotify.com/album/7xm0JNJQQlyvQ3WW4fciDg", image: require("~/assets/images/music/loco.jpeg"), artiste: "Jess ETA", artisteSlug: "jess-eta", ft: ""},
+        {title: "Old Me", link: "https://open.spotify.com/album/51LfdryItjCHuV6Hbuso0K", image: require("~/assets/images/music/old-me.jpeg"), artiste: "Jess ETA", artisteSlug: "jess-eta", ft: ""},
+        {title: "Red Velvet", link: "https://open.spotify.com/album/5V8AoI7nUHzKT4fZB5XzNw", image: require("~/assets/images/music/red-velvet.jpeg"), artiste: "Jess ETA", artisteSlug: "jess-eta", ft: ""},
+      ]
+    }
+  },
   mounted () {
     this.$nextTick(() => {
       this.$nuxt.$loading.start()

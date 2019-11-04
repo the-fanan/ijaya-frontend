@@ -41,7 +41,7 @@
             </div>
           </b-col>
            <b-col md="4">
-            <h2 class="text-white music-title">ETA</h2>
+            <h2 class="text-white music-title">E.T.A.</h2>
             <div class="music-image-holder shadow-lg">
               <img src="~/assets/images/music/ETA.jpeg" class="music-image"/>
             </div>
