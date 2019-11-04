@@ -55,10 +55,10 @@ export default {
     })
   },
   computed: {
-    ...mapState({music: state => state.music}),
+    
   },
   methods: {
-    ...mapMutations({incrementMusic: 'music/increment'}),
+    
   },
   components: {
   },

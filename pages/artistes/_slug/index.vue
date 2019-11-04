@@ -129,7 +129,6 @@ export default {
     })
   },
   computed: {
-    ...mapState({artists: state => state.artists}),
     title() {
       let slug = this.$route.params.slug
       let slugParts = slug.split("-")
@@ -175,7 +174,7 @@ export default {
     }
   },
   methods: {
-    ...mapMutations({incrementArtist: 'artists/increment'}),
+    
   },
   components: {
   },
@@ -184,7 +183,7 @@ export default {
       title: this.title,
       meta: [
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:site', content: '@Dremdo' },
+        { name: 'twitter:site', content: '@IjayaManagement' },
         { name: 'twitter:creator', content: '@IjayaManagement' },
         { name: 'twitter:title', content: this.title },
         { name: 'twitter:description', content: `View ${this.artisteName.fullName}'s story on Ijaya` },

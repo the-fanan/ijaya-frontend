@@ -84,10 +84,10 @@ export default {
     })
   },
   computed: {
-    ...mapState({artists: state => state.artists}),
+   
   },
   methods: {
-    ...mapMutations({incrementArtist: 'artists/increment'}),
+   
   },
   components: {
   },
