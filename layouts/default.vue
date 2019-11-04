@@ -1,25 +1,27 @@
 <template>
   <div>
+    <nav-bar></nav-bar>
     <nuxt/>
+    <footer-bar></footer-bar>
+    <alert></alert>
   </div>
 </template>
 
 <script>
-import { mapMutations, mapState } from 'vuex'
+import { mapMutations } from 'vuex'
 import _ from 'lodash'
+import NavBar from '~/components/shared/NavBar.vue'
+import FooterBar from '~/components/shared/FooterBar.vue'
+import Alert from '~/components/shared/Alert.vue'
 
 export default {
     created()
     {
       if (process.browser) { 
-        window.addEventListener('scroll', _.debounce(this.navBarHandleScroll, 500));
+        window.addEventListener('scroll', _.debounce(this.navBarHandleScroll, 50));
       }
     },
     mounted(){
-     // alert(this.nav.show)
-    },
-    computed: {
-      ...mapState({nav: state => state.nav}),
     },
     methods:{
       ...mapMutations({navBarHandleScroll: 'nav/handleScroll'}),
@@ -30,6 +32,11 @@ export default {
         window.removeEventListener('scroll', this.navBarHandleScroll);
       }
     },
+    components: {
+    NavBar, 
+    FooterBar,
+    Alert
+  },
 }
 </script>
 

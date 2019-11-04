@@ -1,4 +1,6 @@
+const env = require('dotenv').config()
 module.exports = {
+  env: env.parsed,
   /*
   ** Headers of the page
   */
@@ -10,8 +12,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Music talent management house' }
     ],
     link: [
-     { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-     { rel: 'icon', type: 'image/png', href: '/ijaya-black.png' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     ]
   },
   css: [
@@ -19,11 +20,12 @@ module.exports = {
   ],
   plugins: [
     {src: '~/plugins/localStorage.js', ssr: false},
+    {src: '~/plugins/parallax.js', ssr: false},
   ],
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070',},
+  loading: { color: '#CA0E0E', height: '5px'},
   /*
   ** Modules configuration
   * all bootstrap assets for pages are exported here

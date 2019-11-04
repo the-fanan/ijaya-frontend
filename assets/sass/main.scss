@@ -16,25 +16,219 @@
 * General Deign
 *
 *****************************************************************************/
+//#262634
 html,
 body {
   width: 100%;
 	height: 100%;
 	line-height: 1.5;
-	background-color: $theme-color-white;
+	background-color: #262634;
 	color: $theme-text-color-black;
 	font-family: $theme-font-regular;
 	font-size: $body-font-size;
 	padding: 0;
 	margin: 0;
 	letter-spacing: 0.08em;
-}
-.foo-button {
-	@extend .bounce;
-	animation-duration: 5.5s;
-  animation-iteration-count: infinite;
+	scroll-behavior: smooth;
 }
 
+.section-bottom-links {
+	border: 3px solid #CA0E0E;
+	color: #fff;
+	background-color: #CA0E0E;
+	position: absolute;
+	padding: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 20px;
+	z-index: 10;
+	right: 100px;
+	bottom: 0;
+	transition: .6s;
+	font-weight: bold;
+
+	&:hover {
+		background-color: transparent;
+		color: #CA0E0E;
+		text-decoration: none;
+		text-shadow: #fff;
+	}
+
+	&.top {
+		top:0;
+		bottom: auto;
+	}
+}
+.col-no-padding {
+	padding: 0;
+}
+
+.page-heading {
+	background-color: #343a40;
+	padding: 30px;
+	padding-top: 200px;
+	h1 {
+		padding-left: 100px;
+	}
+}
+
+ul.social-links {
+	list-style-type: none;
+	padding: 0;
+
+	li {
+		display: inline-block;
+		margin-left: 15px;
+
+		a {
+			font-size: 16px;
+			color: #fff;
+			
+			&:hover {
+				text-decoration: none;
+				opacity: .7;
+			}
+		}
+	}
+}
+
+.text-#{$app-name}, a.text-#{$app-name} {
+	color: $theme-color;
+}
+
+.contact-style {
+	&.form-control {
+		&.is-valid {
+			border: 1px solid #28a745;
+			background-image: none;
+
+			&~ .feedback {
+				font-size: 12px;
+				color: #28a745;
+				margin-top: 0.25rem;
+				width: 100%;
+			}
+		}
+		&.is-invalid {
+			border: 2px solid #CA0E0E;
+			background-image: none;
+
+			&~ .feedback {
+				font-size: 12px;
+				color: #CA0E0E;
+				margin-top: 0.25rem;
+				width: 100%;
+			}
+		}
+	}
+}
+.ij-alert {
+	width: 100%;
+	padding:0;
+	position: fixed;
+	top: 0;
+	background-color: transparent;
+	z-index: 9999;
+
+	&.alert-slide-in {
+		-webkit-animation: slideInDown 1s ease;
+		animation:slideInDown 1s ease;
+	}
+
+	&.alert-slide-out {
+		-webkit-animation: slideOutUp 1s ease;
+		animation:slideOutUp 1s ease;
+	}
+	
+	.main {
+		padding: 10px;
+		border-bottom-right-radius: 10px;
+		border-bottom-left-radius: 10px;
+		width: 40%;
+
+		&.error {
+			background-color: #CA0E0E;
+		}
+
+		&.success {
+			background-color: #419f68;
+		}
+
+		&.info {
+			background-color: #297c96;
+		}
+	}	
+}
+/******************************************************************************
+* Nav Bar
+*****************************************************************************/
+.ij-nav {
+	color: #000;
+	background: transparent;
+	transition: 1s;
+	padding: 0;
+	padding-left:10%;
+	padding-right:10%;
+
+	a.navbar-brand {
+		color: #fff;
+
+		img {
+			width: 130px;
+		}
+	}
+
+	.navbar-nav {
+		
+		.nav-item {
+			margin-right: 10px;
+			.nav-link {
+				color: #fff;
+				font-size: 18px;
+				transition: .5s;
+				&:hover {
+					color: #CA0E0E;
+				}
+				&.nuxt-link-active {
+					opacity: 0.7;
+				}
+			}
+			
+		}
+	}
+
+	&.nav-fade-in {
+		-webkit-animation: fadeIn 1s ease;
+		animation:fadeIn 1s ease;
+	}
+
+	&.nav-fade-out {
+		-webkit-animation: fadeOut 1s ease;
+		animation:fadeOut 1s ease;
+	}
+
+	&.min-padding {
+		padding: 0;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+.ij-footer {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	.row {
+		width: 100%;
+	}
+	img.footer-logo {
+		width: 100px;
+		display: block;
+		margin-bottom: 10px;
+	}
+	.copy-text {
+		color: #fff;
+	}
+}
 /*******************************************************************************
 *
 * Transitions & Animations
@@ -64,11 +258,6 @@ body {
 	}
  }
 
-.foo-hover {
-	position:relative;
-	-webkit-animation: hover 2s ease infinite;
-	animation:hover 2s ease infinite;
-}
 .hover {
 	position:relative;
 	-webkit-animation: hover 2s ease infinite;
@@ -88,4 +277,267 @@ body {
 	@extend .slideOutLeft;
 	opacity: 0;
 }
+
+/*******************************************************************************
+*
+* Home Page
+*
+*****************************************************************************/
+.hero {
+	height: 100vh;
+	overflow: hidden;
+
+	img {
+		position: absolute;
+		width: 100%;
+		height: auto;
+		transition: 1s;
+		z-index: 0;
+		&.fade-in-animation {
+			-webkit-animation: fadeIn 6s ease;
+			animation:fadeIn 6s ease;
+		}
+
+		&.fade-out-animation {
+			-webkit-animation: fadeOut 6s ease;
+			animation:fadeOut 6s ease;
+		}
+	}
+
+	.hero-scroll-down-holder {
+		width: 100%;
+		z-index: 10;
+		position: absolute;
+		bottom: 20px;
+		margin: 0;
+
+		.clicker {
+			cursor: pointer;
+
+			p {
+				margin: -15px;
+				font-weight: bold;	
+			}
+		}	
+	}
+}
+.artistes-parallax {
+	overflow: hidden;
+	position: relative;
+
+	.artistes-parallax-image {
+		width: 100%;
+		img {
+			width: 100%;
+			z-index: 0;
+			position: relative;
+		}
+	}
+}
+
+.section-title {
+	padding: 30px;
+	font-weight: bold;
+	font-size: 50px;
+}
+.music-section {
+	padding-bottom: 100px;
+	.music-title {
+		font-weight: 200;
+	}
+	.music-image-holder {
+		width: 100%;
+		height: 540px;
+		overflow: hidden;
+		img {
+			height: auto;
+			width: 100%;
+		}
+	}
+	.music-artiste {
+		padding: 15px;
+		padding-bottom: 0;
+		background-color: rgba(202, 14, 14, .8);
+		margin-top: 10px;
+
+		.artiste{
+			font-size: 18px;
+
+			.feature{
+				font-size: 14px;
+			}
+		}
+
+		a {
+			text-decoration: none;
+			font-weight: bold;
+			&:hover {
+				opacity: .8;
+			}
+		}
+	}
+}
+.shows-section {
+	background-color: #343a40;
+	padding-bottom: 100px;
+}
+
+.newsletter-section {
+	padding: 100px;
+
+	.newsletter-input {
+		padding-top: 30px;
+
+		.form-control{
+			border-radius: 0;
+			padding: 10px;
+			font-size: 20px;
+			height: 50px;
+		}
+		button {
+			width: 100%;
+			padding: 10px;
+			border-radius: 0;
+			background-color: transparent;
+			color: #CA0E0E;
+			border: 2px solid #CA0E0E;
+			font-size: 18px;
+			transition: 1s;
+			text-align: right;
+			width: 80%;
+
+			&:hover {
+				background-color: #CA0E0E;
+				color: #fff;
+				width: 100%;
+			}
+		}
+	}
+}
+/*******************************************************************************
+*
+* Music Page
+*
+*****************************************************************************/
+.music-row {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	&.artiste {
+		padding-top: 0;
+		padding-bottom: 20px;
+	}
+
+	.music-holder {
+		width: 100%;
+		height: 300px;
+		overflow: hidden;
+		cursor: pointer;
+		margin-bottom: 30px;
+		position: relative;
+
+		img.music-image {
+			position:absolute;
+			width: 100%;
+			height: auto;
+			transition: 2s;
+		}
+		.music-details {
+			transition: 1s;
+			opacity: 0;
+			background-color: #000;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 10;
+
+			p {
+				width: 100%;
+				i {
+					font-size: 30px;
+					margin-bottom: 10px;
+				}
+				span {
+					p {
+						font-size: 18px;
+						font-weight: bold;
+
+						a {
+							text-decoration: none;
+							color: #fff;
+							font-size: 14px;
+
+							&:hover {
+								opacity: .7;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&:hover {
+			img.music-image {
+				width: 130%;
+			}
+
+			.music-details { 
+				opacity: .8;
+			}
+		}
+	}
+}
+/*******************************************************************************
+*
+* Single Artist Page
+*
+*****************************************************************************/
+.single-artiste-row {
+	.image-col {
+		padding-left: 0;
+	}
+	.image-holder {
+		position: relative;
+		height: 100vh;
+		overflow:hidden;
+
+		img.artiste-image {
+			position: absolute;
+			width: 100%;
+		}
+
+		.artiste-summary {
+			position: absolute;
+			z-index: 10;
+			width: 100%;
+			bottom: 0;
+
+			h1.artiste-name{
+				font-family: $theme-font-bold;
+				color: #fff;
+				font-size: 45px;
+				text-shadow: #000;
+				span.red-text{
+					color: #CA0E0E;
+					text-shadow: #fff;
+				}
+			}
+		}
+	}
+	.artiste-description {
+		padding: 60px;
+		color: #fff;
+		position: relative;
+		height: 100vh;
+		overflow-x: scroll;
+
+		.release-heading {
+			padding-top: 30px;
+		}
+	}
+}
+/*******************************************************************************
+* Responsive Design
+*****************************************************************************/
 @import 'responsive.scss';
