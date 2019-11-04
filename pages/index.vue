@@ -85,13 +85,19 @@
           </b-col>
           <b-col md="6" cols="12" class="newsletter-input">
             <div class="form-group">
-              <input class="form-control" placeholder="Name"/>
+              <input :class="'form-control contact-style ' + contact.name.feedbackClass" name="name" placeholder="Name" :value="contact.name.value" @input="handleNewsLetterInput"/>
+              <div class="feedback">
+                {{contact.name.feedback}}
+              </div>
             </div>
             <div class="form-group">
-              <input class="form-control" placeholder="Email Address"/>
+              <input :class="'form-control contact-style ' + contact.email.feedbackClass" name="email" placeholder="Email Address" :value="contact.email.value" @input="handleNewsLetterInput"/>
+              <div class="feedback">
+                 {{contact.email.feedback}}
+              </div>
             </div>
             <div class="form-group">
-              <button>Subscribe</button>
+              <button @click="submitNewsLetter">Subscribe</button>
             </div>
           </b-col>
         </b-row>
@@ -102,6 +108,7 @@
 
 <script> 
 import Parallax from "~/plugins/parallax";
+import { mapMutations, mapState, mapActions } from 'vuex'
 
 export default {
   data() {
@@ -121,7 +128,11 @@ export default {
       setTimeout(() => this.$nuxt.$loading.finish(), 1000)
     })
   },
+  computed: {
+    ...mapState({contact: state => state.contact}),
+  },
   methods: {
+    ...mapActions({handleNewsLetterInput: "contact/handleInput", submitNewsLetter: "contact/addToNewsLetter"}),
     changeHeroImage()
     {
       setTimeout(() => {this.currentHeroImage = (this.currentHeroImage + 1) % this.heroImages.length;}, 3000)
