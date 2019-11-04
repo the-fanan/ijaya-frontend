@@ -7,6 +7,10 @@ export const state = () => ({
 })
 
 export const mutations = {
+  updateInputStatus(state, data) {
+    state[data.name].feedback = data.message
+    state[data.name].feedbackClass = "is-invalid"
+  },
   validateInput (state, e) {
     let name = e.target.name
     switch (name) {
@@ -59,11 +63,22 @@ export const getters = {
 }
 
 export const actions = {
-	addToNewsLetter({commit, dispatch}) {
-    //commit alert
-    //if status is suucessful reset contact
-    commit('resetContact');
-    //dispatch('alert/showAlert', {type:"info", message:"My message", heading: "A heading"}, { root: true } )
+	addToNewsLetter({commit, dispatch, state}) {
+    axios.post(process.env.API_ROOT + '/contact/subscribe', {name: state.name.value, email: state.email.value})
+    .then(response => {
+      commit('resetContact');
+      dispatch('alert/showAlert', {type:"success", messages: [], heading: "Success! " + response.data.message}, { root: true } )
+    })
+    .catch(error => {
+      if (error.response !== undefined) {
+        if (error.response.data.errors) {  
+          for(let errorField in error.response.data.errors) {
+            commit('updateInputStatus', {name: errorField, message: error.response.data.errors[errorField][0]})
+          }
+        }
+      }
+      dispatch('error/handleErrors', error, { root: true } )
+    })
   },
   sendContactMessage({commit}) {
 

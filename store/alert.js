@@ -1,22 +1,22 @@
 export const state = () => ({
 	show: false,
-	message: "a default message",
-	type: "success",
-	heading: "A default heading"
+	type: "",
+	heading: "",
+	messages: [],
 })
 
 export const mutations = {
 	updateAlert (state, data) {
 		state.show = true
 		state.type = data.type
-		state.message = data.message
+		state.messages = data.messages
 		state.heading = data.heading
 	},
 	resetAlert (state) {
 		state.show = false
 		state.type = ""
-		state.message = ""
 		state.heading = ""
+		state.messages = []
 	}
 }
 

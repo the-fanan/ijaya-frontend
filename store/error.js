@@ -6,15 +6,15 @@ export const actions = {
 	handleErrors ({commit, dispatch}, error) {
 		console.log(error)
 		if (error.response !== undefined) {
-			let errorMessage = "";
+			let messages = [];
 			if (error.response.data.errors) {
 				for(let errorField in error.response.data.errors) {
-					errorMessage +=  error.response.data.errors[errorField][0] + " ";
+					messages.push(error.response.data.errors[errorField][0]);
 				}
 			}
-			dispatch('alert/showAlert', {type:"error", message: errorMessage, heading: error.response.data.message}, { root: true } )
+			dispatch('alert/showAlert', {type:"error", messages: messages, heading: error.response.data.message}, { root: true } )
 		} else {
-			dispatch('alert/showAlert', {type:"error", message:"Please try again.", heading: "An error occurred"}, { root: true } )
+			dispatch('alert/showAlert', {type:"error", messages:[], heading: "An error occurred, please try again."}, { root: true } )
 		}	
 	}
 }
