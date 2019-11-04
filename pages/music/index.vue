@@ -17,8 +17,8 @@
                   <p class="text-white text-center">
                     <i class="fa fa-music"></i>
                     <span>
-                      <p class="song-title"><a class="text-white" target="blank" :href="music.link">{{music.title}}</a> <span v-show="music.ft !== ''">ft. {{ music.ft }}</span></p>
-                      <p class="artiste"><nuxt-link :to="'/artistes/' + music.artisteSlug">{{music.artiste}}</nuxt-link></p>
+                      <p class="song-title"><a class="text-white" target="blank" :href="music.link">{{music.title}}</a></p>
+                      <p class="artiste"><nuxt-link :to="'/artistes/' + music.artisteSlug">{{music.artiste}}</nuxt-link> <span class="feature" v-show="music.ft !== ''">ft. {{ music.ft }}</span></p>
                     </span>
                   </p>
                 </div>

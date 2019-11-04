@@ -3,16 +3,11 @@
 		<b-row class="single-artiste-row">
       <b-col md="6" cols="12" class="image-col">
         <div class="image-holder">
-          <img class="artiste-image" src="~/assets/images/music/nagato-pain.jpg"/>
+          <img class="artiste-image" :src="artiste.image"/>
           <div class="artiste-summary">
             <h1 class="artiste-name text-center">{{ artisteName.whiteText }} <span class="red-text">{{ artisteName.redText }}</span></h1>
             <ul class="artiste-social social-links d-flex h-100 align-items-center justify-content-center">
-              <li><a href="#"><i class="fab fa-twitter fa-lg"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram fa-lg"></i></a></li>
-              <li><a href="#"><i class="fab fa-youtube fa-lg"></i></a></li>
-              <li><a href="#"><i class="fab fa-spotify fa-lg"></i></a></li>
-              <li><a href="#"><i class="fab fa-soundcloud fa-lg"></i></a></li>
-              <li><a href="#"><i class="fab fa-apple fa-lg"></i></a></li>
+              <li v-for="(social, index) in artiste.socialMedia" v-bind:key="index"><a :href="social.link"><i :class="'fab fa-lg ' + social.icon"></i></a></li>
             </ul>
           </div>
         </div>
@@ -20,22 +15,7 @@
       <b-col md="6" cols="12">
         <div class="artiste-description">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            {{ artiste.description }}
           </p>
           <div class="music-holder">
              <b-container :fluid="true">
@@ -45,65 +25,21 @@
                 </b-col>
               </b-row>
               <b-row class="justify-content-start music-row artiste">
-                <b-col md="6" cols="12">
+                <b-col md="6" cols="12" v-for="(music,index) in artiste.musics" v-bind:key="index">
                   <div class="music-holder shadow-lg">
-                    <img class="music-image" src="~/assets/images/music/drifting.jpg"/>
+                    <img class="music-image" :src="music.image"/>
                     <div class="music-details d-flex h-100 align-items-center">
                       <p class="text-white text-center">
                         <i class="fa fa-music"></i>
                         <span>
-                          <p class="song-title">Drifting</p>
-                          <p class="artiste"><nuxt-link to="/artistes/dremdo">Dremdo</nuxt-link></p>
+                          <p class="song-title"><a class="text-white" target="blank" :href="music.link">{{music.title}}</a></p>
+                          <p class="artiste"><nuxt-link :to="'/artistes/' + music.artisteSlug">{{music.artiste}}</nuxt-link> <span class="feature" v-show="music.ft !== ''">ft. {{ music.ft }}</span></p>
                         </span>
                       </p>
                     </div>
                   </div>
                 </b-col>
 
-                <b-col md="6" cols="12">
-                  <div class="music-holder shadow-lg">
-                    <img class="music-image" src="~/assets/images/music/angel-ash.jpg"/>
-                    <div class="music-details d-flex h-100 align-items-center">
-                      <p class="text-white text-center">
-                        <i class="fa fa-music"></i>
-                        <span>
-                          <p class="song-title">Angel Ash</p>
-                          <p class="artiste"><nuxt-link to="/artistes/dremdo">Dremdo</nuxt-link></p>
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </b-col>
-
-                <b-col md="6" cols="12">
-                  <div class="music-holder shadow-lg">
-                    <img class="music-image" src="~/assets/images/music/cello-girl.jpg"/>
-                    <div class="music-details d-flex h-100 align-items-center">
-                      <p class="text-white text-center">
-                        <i class="fa fa-music"></i>
-                        <span>
-                          <p class="song-title">Cello Girl</p>
-                          <p class="artiste"><nuxt-link to="/artistes/dremdo">Dremdo</nuxt-link></p>
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </b-col>
-
-                <b-col md="6" cols="12">
-                  <div class="music-holder shadow-lg">
-                    <img class="music-image" src="~/assets/images/music/guitar-boy.jpg"/>
-                    <div class="music-details d-flex h-100 align-items-center">
-                      <p class="text-white text-center">
-                        <i class="fa fa-music"></i>
-                        <span>
-                          <p class="song-title">Guitar Boy</p>
-                          <p class="artiste"><nuxt-link to="/artistes/dremdo">Dremdo</nuxt-link></p>
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </b-col>
               </b-row>
             </b-container>
           </div>
@@ -119,7 +55,28 @@ import { mapMutations, mapState } from 'vuex'
 export default {
   data() {
     return {
-      
+      artiste: {
+        name: "Jess ETA",
+        slug: "jess-eta",
+        image: require("~/assets/images/artistes/jess-suit.jpg"),
+        description: "JessE The Architect is a Nigerian producer/singer/song-writer who started singing in his church’s choir at 16. He now fuses afrobeats with other genres to create alternative sounds. His sound has evolved from the EDM inspired production on his debut EP September, to the silky smooth sounds in Aphrodite. He shuttles between Nigeria, Ukraine and the United States.",
+        socialMedia: [
+          {link: "https://twitter.com/JessETAmusic", icon: "fa-twitter"},
+          {link: "https://www.instagram.com/jess.eta/", icon: "fa-instagram"},
+          {link: "https://www.youtube.com/channel/UCEu3hP0AwdlhUnC8FLxqLQg", icon: "fa-youtube"},
+          {link: "https://open.spotify.com/artist/0pl5KisZPcKHhrruuvFg3y/about", icon: "fa-spotify"},
+          {link: "https://soundcloud.com/jessekagbo", icon: "fa-soundcloud"},
+          {link: "https://music.apple.com/us/artist/jess-eta/1287192877", icon: "fa-apple"},
+        ],
+        musics: [
+          {title: "Dumb", link: "https://open.spotify.com/album/77GHxa29YSiZU26HqXDAmB", image: require("~/assets/images/music/dumb-ft-grove.jpeg"), artiste: "Jess ETA", artisteSlug: "jess-eta", ft: "Grove"},
+          {title: "E.T.A.", link: "https://open.spotify.com/album/1ZBWO099OEa7mzLvWOTv50", image: require("~/assets/images/music/ETA.jpeg"), artiste: "Jess ETA", artisteSlug: "jess-eta", ft: ""},
+          {title: "Fire", link: "https://open.spotify.com/album/3uhHPmUhCO1x3e9N79DCol", image: require("~/assets/images/music/fire.jpeg"), artiste: "Jess ETA", artisteSlug: "jess-eta", ft: ""},
+          {title: "Loco", link: "https://open.spotify.com/album/7xm0JNJQQlyvQ3WW4fciDg", image: require("~/assets/images/music/loco.jpeg"), artiste: "Jess ETA", artisteSlug: "jess-eta", ft: ""},
+          {title: "Old Me", link: "https://open.spotify.com/album/51LfdryItjCHuV6Hbuso0K", image: require("~/assets/images/music/old-me.jpeg"), artiste: "Jess ETA", artisteSlug: "jess-eta", ft: ""},
+          {title: "Red Velvet", link: "https://open.spotify.com/album/5V8AoI7nUHzKT4fZB5XzNw", image: require("~/assets/images/music/red-velvet.jpeg"), artiste: "Jess ETA", artisteSlug: "jess-eta", ft: ""},
+        ]
+      }
     }
   },
   mounted () {
@@ -187,12 +144,12 @@ export default {
         { name: 'twitter:creator', content: '@IjayaManagement' },
         { name: 'twitter:title', content: this.title },
         { name: 'twitter:description', content: `View ${this.artisteName.fullName}'s story on Ijaya` },
-        { name: 'twitter:image', content: 'https://image.com/image.png' },
+        { name: 'twitter:image', content: process.env.BASE_URL + this.artiste.image },
         { property: 'og:url', content: process.env.BASE_URL + this.$route.path },
         { property: 'og:type', content: 'article' },
         { property: 'og:title', content: this.title},
         { property: 'og:description', content: `View ${this.artisteName.fullName}'s story on Ijaya` },
-        { property: 'og:image', content: 'https://image.com/image.png' },
+        { property: 'og:image', content:  process.env.BASE_URL + this.artiste.image },
       ],
     }
   }
