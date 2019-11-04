@@ -80,8 +80,22 @@ export const actions = {
       dispatch('error/handleErrors', error, { root: true } )
     })
   },
-  sendContactMessage({commit}) {
-
+  sendContactMessage({commit, dispatch, state}) {
+    axios.post(process.env.API_ROOT + '/contact/message', {name: state.name.value, email: state.email.value, message: state.message.value})
+    .then(response => {
+      commit('resetContact');
+      dispatch('alert/showAlert', {type:"success", messages: [], heading: "Success! " + response.data.message}, { root: true } )
+    })
+    .catch(error => {
+      if (error.response !== undefined) {
+        if (error.response.data.errors) {  
+          for(let errorField in error.response.data.errors) {
+            commit('updateInputStatus', {name: errorField, message: error.response.data.errors[errorField][0]})
+          }
+        }
+      }
+      dispatch('error/handleErrors', error, { root: true } )
+    })
   },
   handleInput({commit}, e) {
     commit('updateValues', e);

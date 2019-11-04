@@ -14,16 +14,28 @@
               <b-row class="justify-content-center">
                 <b-col md="9" cols="12" class="newsletter-input">
                   <div class="form-group">
-                    <input class="form-control" placeholder="Name"/>
+                    <input :class="'form-control contact-style ' + contact.name.feedbackClass" name="name" placeholder="Name" :value="contact.name.value" @input="handleContactInput"/>
+                    <div class="feedback">
+                      {{contact.name.feedback}}
+                    </div>
                   </div>
+
                   <div class="form-group">
-                    <input class="form-control" placeholder="Email Address"/>
+                    <input :class="'form-control contact-style ' + contact.email.feedbackClass" name="email" placeholder="Email Address" :value="contact.email.value" @input="handleContactInput"/>
+                    <div class="feedback">
+                      {{contact.email.feedback}}
+                    </div>
                   </div>
+
                   <div class="form-group">
-                    <textarea class="form-control" placeholder="Message"></textarea>
+                    <textarea :class="'form-control contact-style ' + contact.message.feedbackClass" name="message" placeholder="Message" :value="contact.message.value" @input="handleContactInput"></textarea>
+                    <div class="feedback">
+                      {{contact.message.feedback}}
+                    </div>
                   </div>
+              
                   <div class="form-group">
-                    <button>Contact Us</button>
+                    <button @click="sendContactMessage">Contact Us</button>
                   </div>
                 </b-col>
               </b-row>
@@ -36,6 +48,8 @@
 </template>
 
 <script>
+import { mapMutations, mapState, mapActions } from 'vuex'
+
 export default {
   mounted () {
     this.$nextTick(() => {
@@ -45,15 +59,15 @@ export default {
     })
   },
   computed: {
-   
+    ...mapState({contact: state => state.contact}),
   },
   methods: {
-   
+   ...mapActions({handleContactInput: "contact/handleInput", sendContactMessage: "contact/sendContactMessage"}),
   },
   components: {
   },
   head: {
-    title: 'Contact Ijaya'
+    title: 'Contact Ijaya Management'
   }
 }
 </script>
