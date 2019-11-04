@@ -95,6 +95,70 @@ ul.social-links {
 .text-#{$app-name}, a.text-#{$app-name} {
 	color: $theme-color;
 }
+
+.contact-style {
+	&.form-control {
+		&.is-valid {
+			border: 1px solid #28a745;
+			background-image: none;
+
+			&~ .feedback {
+				font-size: 12px;
+				color: #28a745;
+				margin-top: 0.25rem;
+				width: 100%;
+			}
+		}
+		&.is-invalid {
+			border: 2px solid #CA0E0E;
+			background-image: none;
+
+			&~ .feedback {
+				font-size: 12px;
+				color: #CA0E0E;
+				margin-top: 0.25rem;
+				width: 100%;
+			}
+		}
+	}
+}
+.ij-alert {
+	width: 100%;
+	padding:0;
+	position: fixed;
+	top: 0;
+	background-color: transparent;
+	z-index: 9999;
+
+	&.alert-slide-in {
+		-webkit-animation: slideInDown 1s ease;
+		animation:slideInDown 1s ease;
+	}
+
+	&.alert-slide-out {
+		-webkit-animation: slideOutUp 1s ease;
+		animation:slideOutUp 1s ease;
+	}
+	
+	.main {
+		padding: 10px;
+		border-bottom-right-radius: 10px;
+		border-bottom-left-radius: 10px;
+		width: 40%;
+
+		&.error {
+			background-color: #CA0E0E;
+		}
+
+		&.success {
+			background-color: #419f68;
+		}
+
+		&.info {
+			background-color: #297c96;
+		}
+	}	
+}
 /******************************************************************************
 * Nav Bar
 *****************************************************************************/
