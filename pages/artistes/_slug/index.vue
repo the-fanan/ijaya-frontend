@@ -197,7 +197,7 @@ export default {
     if (artistesSlug.includes(params.slug) ) {
       return {artiste: _.find(artistes, ['slug', params.slug])}
     } else {
-      error({ statusCode: 404, message: 'Artiste does not exist on this platform' })
+      error({ statusCode: 404, message: 'This artiste does not exist on this platform' })
     }
   }
 }
