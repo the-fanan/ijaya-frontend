@@ -71,7 +71,7 @@
     <b-row>
       <b-col class="col-no-padding">
         <parallax :speedFactor="0.3" :sectionHeight="60" sectionClass="artistes-parallax" containerClass="artistes-parallax-image">
-          <img src="~/assets/images/artistes/artist-band.jpg" alt="artistes">
+          <img src="~/assets/images/artistes/jess-upside-down.jpg" alt="artistes">
         </parallax>
         <nuxt-link class="section-bottom-links" to="/artistes">View All Artistes</nuxt-link>
       </b-col>
