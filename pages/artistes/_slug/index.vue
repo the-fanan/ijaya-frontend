@@ -51,7 +51,7 @@
 
 <script>
 import { mapMutations, mapState } from 'vuex'
-
+import _ from 'lodash'
 export default {
   data() {
     return {
@@ -76,7 +76,7 @@ export default {
           {title: "Old Me", link: "https://open.spotify.com/album/51LfdryItjCHuV6Hbuso0K", image: require("~/assets/images/music/old-me.jpeg"), artiste: "Jess ETA", artisteSlug: "jess-eta", ft: ""},
           {title: "Red Velvet", link: "https://open.spotify.com/album/5V8AoI7nUHzKT4fZB5XzNw", image: require("~/assets/images/music/red-velvet.jpeg"), artiste: "Jess ETA", artisteSlug: "jess-eta", ft: ""},
         ]
-      }
+      },
     }
   },
   mounted () {
@@ -151,6 +151,49 @@ export default {
         { property: 'og:description', content: `View ${this.artisteName.fullName}'s story on Ijaya` },
         { property: 'og:image', content:  process.env.BASE_URL + this.artiste.image },
       ],
+    }
+  },
+  asyncData ({ params, error }) {
+    let artistesSlug = ['jess-eta', 'roadman']
+    let artistes = [
+          {
+          name: "Jess ETA",
+          slug: "jess-eta",
+          image: require("~/assets/images/artistes/jess-suit.jpg"),
+          description: "JessE The Architect is a Nigerian producer/singer/song-writer who started singing in his church’s choir at 16. He now fuses afrobeats with other genres to create alternative sounds. His sound has evolved from the EDM inspired production on his debut EP September, to the silky smooth sounds in Aphrodite. He shuttles between Nigeria, Ukraine and the United States.",
+          socialMedia: [
+            {link: "https://twitter.com/JessETAmusic", icon: "fa-twitter"},
+            {link: "https://www.instagram.com/jess.eta/", icon: "fa-instagram"},
+            {link: "https://www.youtube.com/channel/UCEu3hP0AwdlhUnC8FLxqLQg", icon: "fa-youtube"},
+            {link: "https://open.spotify.com/artist/0pl5KisZPcKHhrruuvFg3y/about", icon: "fa-spotify"},
+            {link: "https://soundcloud.com/jessekagbo", icon: "fa-soundcloud"},
+            {link: "https://music.apple.com/us/artist/jess-eta/1287192877", icon: "fa-apple"},
+          ],
+          musics: [
+            {title: "Dumb", link: "https://open.spotify.com/album/77GHxa29YSiZU26HqXDAmB", image: require("~/assets/images/music/dumb-ft-grove.jpeg"), artiste: "Jess ETA", artisteSlug: "jess-eta", ft: "Grove"},
+            {title: "E.T.A.", link: "https://open.spotify.com/album/1ZBWO099OEa7mzLvWOTv50", image: require("~/assets/images/music/ETA.jpeg"), artiste: "Jess ETA", artisteSlug: "jess-eta", ft: ""},
+            {title: "Fire", link: "https://open.spotify.com/album/3uhHPmUhCO1x3e9N79DCol", image: require("~/assets/images/music/fire.jpeg"), artiste: "Jess ETA", artisteSlug: "jess-eta", ft: ""},
+            {title: "Loco", link: "https://open.spotify.com/album/7xm0JNJQQlyvQ3WW4fciDg", image: require("~/assets/images/music/loco.jpeg"), artiste: "Jess ETA", artisteSlug: "jess-eta", ft: ""},
+            {title: "Old Me", link: "https://open.spotify.com/album/51LfdryItjCHuV6Hbuso0K", image: require("~/assets/images/music/old-me.jpeg"), artiste: "Jess ETA", artisteSlug: "jess-eta", ft: ""},
+            {title: "Red Velvet", link: "https://open.spotify.com/album/5V8AoI7nUHzKT4fZB5XzNw", image: require("~/assets/images/music/red-velvet.jpeg"), artiste: "Jess ETA", artisteSlug: "jess-eta", ft: ""},
+          ]
+        },
+        {
+          name: "Roadman",
+          slug: "roadman",
+          image: require("~/assets/images/artistes/toro1.jpeg"),
+          description: "Roadman (Toro Alaba) is an eccentric, enigmatic and powerful musician. He resides in U.S.A. and has gained a large number of listeners from his local community.",
+          socialMedia: [
+            {link: "https://soundcloud.com/toro-alaba-819454537", icon: "fa-soundcloud"},
+          ],
+          musics: [
+          ]
+        }
+      ]
+    if (artistesSlug.includes(params.slug) ) {
+      return {artiste: _.find(artistes, ['slug', params.slug])}
+    } else {
+      error({ statusCode: 404, message: 'Artiste does not exist on this platform' })
     }
   }
 }

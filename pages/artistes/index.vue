@@ -40,6 +40,7 @@ export default {
     return {
       artistes: [
         {name:"Jess ETA", slug: "jess-eta", image: require("~/assets/images/artistes/jess-suit.jpg")},
+        {name:"Roadman", slug: "roadman", image: require("~/assets/images/artistes/toro1.jpeg")},
       ]
     }
   },
