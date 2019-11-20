@@ -10,7 +10,7 @@
         v-on:after-enter="changeHeroImage"
         mode="in-out"
         >
-          <img class="responsive" :src="heroImages[currentHeroImage].src" v-bind:key="heroImages[currentHeroImage].name"/>
+          <img class="responsive hero-image" :src="heroImages[currentHeroImage].src" v-bind:key="heroImages[currentHeroImage].name"/>
         </transition>
         <b-row class="hero-scroll-down-holder">
           <b-col class="d-flex justify-content-center">
@@ -32,21 +32,21 @@
         </b-row>
         <b-row class="justify-content-center">
           <b-col md="4">
-            <h2 class="text-white music-title">Angel Ash</h2>
+            <h2 class="text-white music-title">Dumb</h2>
             <div class="music-image-holder shadow-lg">
-              <img src="~/assets/images/music/angel-ash.jpg" class="music-image"/>
+              <img src="~/assets/images/music/dumb-ft-grove.jpeg" class="music-image"/>
             </div>
             <div class="d-flex justify-content-between music-artiste text-white">
-              <p class="artiste"><nuxt-link to="/artistes/dremdo" class="text-white">Dremdo</nuxt-link> <span class="feature">ft Looper</span></p> <a href="#" class="text-white">Listen</a>
+              <p class="artiste"><nuxt-link to="/artistes/jess-eta" class="text-white">Jess ETA</nuxt-link> <span class="feature">ft Grove</span></p> <a href="https://open.spotify.com/album/77GHxa29YSiZU26HqXDAmB" class="text-white" target="blank">Listen</a>
             </div>
           </b-col>
            <b-col md="4">
-            <h2 class="text-white music-title">Cello Boy</h2>
+            <h2 class="text-white music-title">E.T.A.</h2>
             <div class="music-image-holder shadow-lg">
-              <img src="~/assets/images/music/cello-boy.jpg" class="music-image"/>
+              <img src="~/assets/images/music/ETA.jpeg" class="music-image"/>
             </div>
             <div class="d-flex justify-content-between music-artiste text-white">
-              <p class="artiste"><nuxt-link to="/artistes/dremdo" class="text-white">Cierro</nuxt-link></p> <a href="#" class="text-white">Listen</a>
+              <p class="artiste"><nuxt-link to="/artistes/jess-eta" class="text-white">Jess ETA</nuxt-link></p> <a href="https://open.spotify.com/album/1ZBWO099OEa7mzLvWOTv50" target="blank" class="text-white">Listen</a>
             </div>
           </b-col>
         </b-row>
@@ -71,7 +71,7 @@
     <b-row>
       <b-col class="col-no-padding">
         <parallax :speedFactor="0.3" :sectionHeight="60" sectionClass="artistes-parallax" containerClass="artistes-parallax-image">
-          <img src="~/assets/images/artistes/artist-band.jpg" alt="artistes">
+          <img src="~/assets/images/artistes/jess-full-image.jpeg" alt="artistes">
         </parallax>
         <nuxt-link class="section-bottom-links" to="/artistes">View All Artistes</nuxt-link>
       </b-col>
@@ -114,8 +114,9 @@ export default {
   data() {
     return {
       heroImages: [
+        {src: require("~/assets/images/artistes/jess-suit.jpg"), name:"jess"}, 
+        {src: require("~/assets/images/artistes/toro2.jpeg"), name:"roadman"}, 
         {src: require("~/assets/images/heros/amplifier.jpg"), name:"amplifier"},
-        {src: require("~/assets/images/heros/audience.jpg"), name:"audience"}, 
         {src: require("~/assets/images/heros/record.jpg"), name:"record"},
         ],
       currentHeroImage: 0,

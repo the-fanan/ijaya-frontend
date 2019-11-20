@@ -231,6 +231,26 @@ ul.social-links {
 }
 /*******************************************************************************
 *
+* Error Page
+*
+*****************************************************************************/
+.error-col {
+	height: 100vh;
+	.text-holder {
+		width: 100%;
+		span {
+			color: #CA0E0E;
+		}
+		.nuxt-link-active {
+			width: 100%;
+			display: block;
+			font-weight: bold;
+			color: #CA0E0E !important;
+		}
+	}
+}
+/*******************************************************************************
+*
 * Transitions & Animations
 *
 *****************************************************************************/
@@ -425,6 +445,9 @@ ul.social-links {
 	&.artiste {
 		padding-top: 0;
 		padding-bottom: 20px;
+	}
+	span.feature {
+		font-size: 12px;
 	}
 
 	.music-holder {
