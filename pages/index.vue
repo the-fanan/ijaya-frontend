@@ -10,7 +10,7 @@
         v-on:after-enter="changeHeroImage"
         mode="in-out"
         >
-          <img class="responsive" :src="heroImages[currentHeroImage].src" v-bind:key="heroImages[currentHeroImage].name"/>
+          <img class="responsive hero-image" :src="heroImages[currentHeroImage].src" v-bind:key="heroImages[currentHeroImage].name"/>
         </transition>
         <b-row class="hero-scroll-down-holder">
           <b-col class="d-flex justify-content-center">
@@ -71,7 +71,7 @@
     <b-row>
       <b-col class="col-no-padding">
         <parallax :speedFactor="0.3" :sectionHeight="60" sectionClass="artistes-parallax" containerClass="artistes-parallax-image">
-          <img src="~/assets/images/artistes/jess-upside-down.jpg" alt="artistes">
+          <img src="~/assets/images/artistes/jess-full-image.jpeg" alt="artistes">
         </parallax>
         <nuxt-link class="section-bottom-links" to="/artistes">View All Artistes</nuxt-link>
       </b-col>
@@ -114,8 +114,9 @@ export default {
   data() {
     return {
       heroImages: [
+        {src: require("~/assets/images/artistes/jess-suit.jpg"), name:"jess"}, 
+        {src: require("~/assets/images/artistes/toro2.jpeg"), name:"roadman"}, 
         {src: require("~/assets/images/heros/amplifier.jpg"), name:"amplifier"},
-        {src: require("~/assets/images/heros/audience.jpg"), name:"audience"}, 
         {src: require("~/assets/images/heros/record.jpg"), name:"record"},
         ],
       currentHeroImage: 0,
