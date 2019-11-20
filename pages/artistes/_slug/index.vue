@@ -187,6 +187,10 @@ export default {
             {link: "https://soundcloud.com/toro-alaba-819454537", icon: "fa-soundcloud"},
           ],
           musics: [
+            {title: "Belinda", link: "https://soundcloud.com/toro-alaba-819454537/belinda", image: require("~/assets/images/music/belinda.jpg"), artiste: "Roadman", artisteSlug: "roadman", ft: ""},
+            {title: "Soji", link: "https://soundcloud.com/toro-alaba-819454537/soji", image: require("~/assets/images/music/soji.jpg"), artiste: "Roadman", artisteSlug: "roadman", ft: ""},
+            {title: "Aries", link: "https://soundcloud.com/toro-alaba-819454537/aries", image: require("~/assets/images/music/aries.jpg"), artiste: "Roadman", artisteSlug: "roadman", ft: ""},
+            {title: "Ceremony", link: "https://soundcloud.com/toro-alaba-819454537/ceremony-feat-dr-wavyy", image: require("~/assets/images/music/ceremony.jpg"), artiste: "Roadman", artisteSlug: "roadman", ft: "Dr Wavy"},
           ]
         }
       ]

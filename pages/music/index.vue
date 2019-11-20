@@ -44,6 +44,10 @@ export default {
         {title: "Loco", link: "https://open.spotify.com/album/7xm0JNJQQlyvQ3WW4fciDg", image: require("~/assets/images/music/loco.jpeg"), artiste: "Jess ETA", artisteSlug: "jess-eta", ft: ""},
         {title: "Old Me", link: "https://open.spotify.com/album/51LfdryItjCHuV6Hbuso0K", image: require("~/assets/images/music/old-me.jpeg"), artiste: "Jess ETA", artisteSlug: "jess-eta", ft: ""},
         {title: "Red Velvet", link: "https://open.spotify.com/album/5V8AoI7nUHzKT4fZB5XzNw", image: require("~/assets/images/music/red-velvet.jpeg"), artiste: "Jess ETA", artisteSlug: "jess-eta", ft: ""},
+        {title: "Belinda", link: "https://soundcloud.com/toro-alaba-819454537/belinda", image: require("~/assets/images/music/belinda.jpg"), artiste: "Roadman", artisteSlug: "roadman", ft: ""},
+        {title: "Soji", link: "https://soundcloud.com/toro-alaba-819454537/soji", image: require("~/assets/images/music/soji.jpg"), artiste: "Roadman", artisteSlug: "roadman", ft: ""},
+        {title: "Aries", link: "https://soundcloud.com/toro-alaba-819454537/aries", image: require("~/assets/images/music/aries.jpg"), artiste: "Roadman", artisteSlug: "roadman", ft: ""},
+        {title: "Ceremony", link: "https://soundcloud.com/toro-alaba-819454537/ceremony-feat-dr-wavyy", image: require("~/assets/images/music/ceremony.jpg"), artiste: "Roadman", artisteSlug: "roadman", ft: "Dr Wavy"},
       ]
     }
   },
