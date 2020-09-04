@@ -17,7 +17,7 @@
     "bootstrap-vue": "^2.0.2",
     "dotenv": "^8.2.0",
     "lodash": "^4.17.15",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "nuxt": "^2.0.0",
     "sass-loader": "^8.0.0",
     "vue-parallaxy": "^1.1.1",
